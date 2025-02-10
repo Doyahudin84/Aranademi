@@ -1,17 +1,16 @@
-
 import streamlit as st
 
 # Set page configuration to always be mobile-sized
 st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 
-# Tambahkan CSS untuk efek hover dan gambar responsif
+# Add CSS for hover effect and responsive images
 st.markdown(
     """
     <style>
     .nav-img {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        width: 100%; /* Menyesuaikan lebar gambar */
-        max-width: 150px; /* Maksimal lebar 150px */
+        width: 100%; /* Adjust image width */
+        max-width: 150px; /* Max width of 150px */
     }
     .nav-img:hover {
         transform: scale(1.1);
@@ -21,16 +20,16 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-# Menonaktifkan sidebar
+# Disable sidebar
 st.sidebar.empty()
 
-# Gambar untuk navigasi
+# Images for navigation
 col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
     st.markdown(
         """
-        <a href="#Home">
+        <a href="?page=Home">
             <img class="nav-img" src="images/home.jpg" alt="Home" width="150">
         </a>
         """, unsafe_allow_html=True)
@@ -38,7 +37,7 @@ with col1:
 with col2:
     st.markdown(
         """
-        <a href="#Fisika">
+        <a href="?page=Fisika">
             <img class="nav-img" src="images/fisika.jpg" alt="Fisika" width="150">
         </a>
         """, unsafe_allow_html=True)
@@ -46,7 +45,7 @@ with col2:
 with col3:
     st.markdown(
         """
-        <a href="#Kimia">
+        <a href="?page=Kimia">
             <img class="nav-img" src="images/kimia.jpg" alt="Kimia" width="150">
         </a>
         """, unsafe_allow_html=True)
@@ -54,7 +53,7 @@ with col3:
 with col4:
     st.markdown(
         """
-        <a href="#Biologi">
+        <a href="?page=Biologi">
             <img class="nav-img" src="images/biologi.jpg" alt="Biologi" width="150">
         </a>
         """, unsafe_allow_html=True)
@@ -62,27 +61,27 @@ with col4:
 with col5:
     st.markdown(
         """
-        <a href="#Donasi">
+        <a href="?page=Donasi">
             <img class="nav-img" src="images/donasi.jpg" alt="Donasi" width="150">
         </a>
         """, unsafe_allow_html=True)
 
-# Simulasi halaman berdasarkan URL hash
-page = st.experimental_get_query_params().get("page", ["Home"])[0]
+# Get query parameters using st.query_params (recommended for future compatibility)
+page = st.query_params.get("page", ["Home"])[0]
 
-# Tampilkan konten halaman sesuai dengan pemilihan
+# Display content based on the selected page
 if page == "Home":
-    st.title("Selamat datang di Halaman Home")
-    st.write("Ini adalah halaman utama dari aplikasi Streamlit.")
+    st.title("Welcome to the Home Page")
+    st.write("This is the main page of the Streamlit app.")
 elif page == "Fisika":
-    st.title("Selamat datang di Halaman Fisika")
-    st.write("Ini adalah halaman Fisika dari aplikasi Streamlit.")
+    st.title("Welcome to the Fisika Page")
+    st.write("This is the Fisika page of the Streamlit app.")
 elif page == "Kimia":
-    st.title("Selamat datang di Halaman Kimia")
-    st.write("Ini adalah halaman Kimia dari aplikasi Streamlit.")
+    st.title("Welcome to the Kimia Page")
+    st.write("This is the Kimia page of the Streamlit app.")
 elif page == "Biologi":
-    st.title("Selamat datang di Halaman Biologi")
-    st.write("Ini adalah halaman Biologi dari aplikasi Streamlit.")
+    st.title("Welcome to the Biologi Page")
+    st.write("This is the Biologi page of the Streamlit app.")
 elif page == "Donasi":
-    st.title("Selamat datang di Halaman Donasi")
-    st.write("Ini adalah halaman Donasi dari aplikasi Streamlit.")
+    st.title("Welcome to the Donasi Page")
+    st.write("This is the Donasi page of the Streamlit app.")
