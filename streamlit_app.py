@@ -1,5 +1,5 @@
 import streamlit as st
-
+import pages from home
 # Set page configuration to always be mobile-sized
 st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 
