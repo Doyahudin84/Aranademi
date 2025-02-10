@@ -1,4 +1,5 @@
 import streamlit as st
+import home
 import page1
 import page2
 
