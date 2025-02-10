@@ -1,9 +1,10 @@
+
 import streamlit as st
-from pages import home, fisika, kimia, biologi, donasi
-print(dir(home))
+
 # Set page configuration to always be mobile-sized
 st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 
+# Tambahkan CSS untuk efek hover dan gambar responsif
 st.markdown(
     """
     <style>
@@ -38,7 +39,7 @@ with col2:
     st.markdown(
         """
         <a href="#Fisika">
-            <img class="nav-img" src="/fisika.png" alt="Fisika" width="150">
+            <img class="nav-img" src="images/fisika.jpg" alt="Fisika" width="150">
         </a>
         """, unsafe_allow_html=True)
 
@@ -66,30 +67,22 @@ with col5:
         </a>
         """, unsafe_allow_html=True)
 
-# Default selected page is "Home"
-if 'selected' not in locals():
-    selected = "Home"
+# Simulasi halaman berdasarkan URL hash
+page = st.experimental_get_query_params().get("page", ["Home"])[0]
 
-# Logic to handle page content display
-if selected == "Home":
+# Tampilkan konten halaman sesuai dengan pemilihan
+if page == "Home":
     st.title("Selamat datang di Halaman Home")
     st.write("Ini adalah halaman utama dari aplikasi Streamlit.")
-    home.doyaapp()  # Panggil fungsi app dari pages/home.py
-elif selected == "Fisika":
+elif page == "Fisika":
     st.title("Selamat datang di Halaman Fisika")
     st.write("Ini adalah halaman Fisika dari aplikasi Streamlit.")
-    fisika.app()  # Panggil fungsi app dari pages/fisika.py
-elif selected == "Kimia":
+elif page == "Kimia":
     st.title("Selamat datang di Halaman Kimia")
     st.write("Ini adalah halaman Kimia dari aplikasi Streamlit.")
-    kimia.app()  # Panggil fungsi app dari pages/kimia.py
-elif selected == "Biologi":
+elif page == "Biologi":
     st.title("Selamat datang di Halaman Biologi")
     st.write("Ini adalah halaman Biologi dari aplikasi Streamlit.")
-    biologi.app()  # Panggil fungsi app dari pages/biologi.py
-elif selected == "Donasi":
+elif page == "Donasi":
     st.title("Selamat datang di Halaman Donasi")
     st.write("Ini adalah halaman Donasi dari aplikasi Streamlit.")
-    donasi.app()  # Panggil fungsi app dari pages/donasi.py
-
-
