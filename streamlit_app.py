@@ -4,6 +4,22 @@ from pages import home, fisika, kimia, biologi, donasi
 # Set page configuration to always be mobile-sized
 st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 
+st.markdown(
+    """
+    <style>
+    .nav-img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%; /* Menyesuaikan lebar gambar */
+        max-width: 150px; /* Maksimal lebar 150px */
+    }
+    .nav-img:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
+
 # Menonaktifkan sidebar
 st.sidebar.empty()
 
