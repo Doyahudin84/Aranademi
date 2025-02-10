@@ -1,38 +1,89 @@
 import streamlit as st
-import home
-import page1
-import page2
+from pages import home, fisika, kimia, biologi, donasi
 
 # Set page configuration to always be mobile-sized
 st.set_page_config(layout="centered")
 
-# Create buttons for navigation
-col1, col2, col3 = st.columns(3)
+# Tambahkan CSS untuk efek hover pada gambar
+st.markdown(
+    """
+    <style>
+    .nav-img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .nav-img:hover {
+        transform: scale(1.1);  /* Membesar gambar sedikit */
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);  /* Menambahkan bayangan */
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+# Gambar untuk navigasi
+col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
-    if st.button("Home"):
-        selected = "Home"
+    st.markdown(
+        """
+        <a href="#Home">
+            <img class="nav-img" src="images/home.jpg" alt="Home" width="150">
+        </a>
+        """, unsafe_allow_html=True)
+
 with col2:
-    if st.button("Page 1"):
-        selected = "Page 1"
+    st.markdown(
+        """
+        <a href="#Fisika">
+            <img class="nav-img" src="images/fisika.jpg" alt="Fisika" width="150">
+        </a>
+        """, unsafe_allow_html=True)
+
 with col3:
-    if st.button("Page 2"):
-        selected = "Page 2"
+    st.markdown(
+        """
+        <a href="#Kimia">
+            <img class="nav-img" src="images/kimia.jpg" alt="Kimia" width="150">
+        </a>
+        """, unsafe_allow_html=True)
+
+with col4:
+    st.markdown(
+        """
+        <a href="#Biologi">
+            <img class="nav-img" src="images/biologi.jpg" alt="Biologi" width="150">
+        </a>
+        """, unsafe_allow_html=True)
+
+with col5:
+    st.markdown(
+        """
+        <a href="#Donasi">
+            <img class="nav-img" src="images/donasi.jpg" alt="Donasi" width="150">
+        </a>
+        """, unsafe_allow_html=True)
 
 # Default selected page is "Home"
 if 'selected' not in locals():
     selected = "Home"
 
-# Navigation logic
+# Logic to handle page content display
 if selected == "Home":
-    st.title("Welcome to the Home Page")
-    st.write("This is the home page of the Streamlit app.")
-    home.app()  # Call the home app function
-elif selected == "Page 1":
-    st.title("Welcome to Page 1")
-    st.write("This is Page 1 of the Streamlit app.")
-    page1.app()  # Call the page1 app function
-elif selected == "Page 2":
-    st.title("Welcome to Page 2")
-    st.write("This is Page 2 of the Streamlit app.")
-    page2.app()  # Call the page2 app function
+    st.title("Selamat datang di Halaman Home")
+    st.write("Ini adalah halaman utama dari aplikasi Streamlit.")
+    home.app()  # Panggil fungsi app dari pages/home.py
+elif selected == "Fisika":
+    st.title("Selamat datang di Halaman Fisika")
+    st.write("Ini adalah halaman Fisika dari aplikasi Streamlit.")
+    fisika.app()  # Panggil fungsi app dari pages/fisika.py
+elif selected == "Kimia":
+    st.title("Selamat datang di Halaman Kimia")
+    st.write("Ini adalah halaman Kimia dari aplikasi Streamlit.")
+    kimia.app()  # Panggil fungsi app dari pages/kimia.py
+elif selected == "Biologi":
+    st.title("Selamat datang di Halaman Biologi")
+    st.write("Ini adalah halaman Biologi dari aplikasi Streamlit.")
+    biologi.app()  # Panggil fungsi app dari pages/biologi.py
+elif selected == "Donasi":
+    st.title("Selamat datang di Halaman Donasi")
+    st.write("Ini adalah halaman Donasi dari aplikasi Streamlit.")
+    donasi.app()  # Panggil fungsi app dari pages/donasi.py
+
