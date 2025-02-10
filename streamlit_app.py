@@ -3,14 +3,12 @@ import streamlit as st
 # Set page configuration to always be mobile-sized
 st.set_page_config(layout="centered")
 
-# Create a horizontal sidebar with options
-selected = option_menu(
-    menu_title=None,  # required
-    options=["Home", "Page 1", "Page 2"],  # required
-    icons=["house", "file-earmark", "file-earmark"],  # optional
-    menu_icon="cast",  # optional
-    default_index=0,  # optional
-    orientation="horizontal",
+# Create a horizontal sidebar with options using radio buttons
+selected = st.radio(
+    label="Navigation",
+    options=["Home", "Page 1", "Page 2"],
+    index=0,
+    horizontal=True
 )
 
 # Navigation logic
