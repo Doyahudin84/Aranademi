@@ -74,7 +74,7 @@ if 'selected' not in locals():
 if selected == "Home":
     st.title("Selamat datang di Halaman Home")
     st.write("Ini adalah halaman utama dari aplikasi Streamlit.")
-    home.app()  # Panggil fungsi app dari pages/home.py
+    home.doyaapp()  # Panggil fungsi app dari pages/home.py
 elif selected == "Fisika":
     st.title("Selamat datang di Halaman Fisika")
     st.write("Ini adalah halaman Fisika dari aplikasi Streamlit.")
