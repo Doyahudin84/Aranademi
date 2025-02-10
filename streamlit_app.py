@@ -2,21 +2,10 @@ import streamlit as st
 from pages import home, fisika, kimia, biologi, donasi
 
 # Set page configuration to always be mobile-sized
-st.set_page_config(layout="centered")
+st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 
-# Tambahkan CSS untuk efek hover pada gambar
-st.markdown(
-    """
-    <style>
-    .nav-img {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .nav-img:hover {
-        transform: scale(1.1);  /* Membesar gambar sedikit */
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);  /* Menambahkan bayangan */
-    }
-    </style>
-    """, unsafe_allow_html=True)
+# Menonaktifkan sidebar
+st.sidebar.empty()
 
 # Gambar untuk navigasi
 col1, col2, col3, col4, col5 = st.columns(5)
@@ -86,4 +75,5 @@ elif selected == "Donasi":
     st.title("Selamat datang di Halaman Donasi")
     st.write("Ini adalah halaman Donasi dari aplikasi Streamlit.")
     donasi.app()  # Panggil fungsi app dari pages/donasi.py
+
 
