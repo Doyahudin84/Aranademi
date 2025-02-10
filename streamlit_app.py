@@ -38,7 +38,7 @@ with col2:
     st.markdown(
         """
         <a href="?page=Fisika">
-            <img class="nav-img" src="fisika.png" alt="Fisika" width="150">
+            <img class="nav-img" src="/fisika.png" alt="Fisika" width="150">
         </a>
         """, unsafe_allow_html=True)
 
