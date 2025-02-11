@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 import importlib
+from pages import *
 
 # Set the page configuration
 st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
