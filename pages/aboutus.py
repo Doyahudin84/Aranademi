@@ -1,4 +1,4 @@
-# pages/home.py
+# pages/aboutus.py
 
 import streamlit as st
 
