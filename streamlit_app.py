@@ -3,9 +3,7 @@ from streamlit_option_menu import option_menu
 from pages import *
 
 # Set page configuration to always be mobile-sized
-st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
-
-
+st.set_page_config(layout="centered", initial_sidebar_state="empty")
 class MultiApp:
 
     def __init__(self):
@@ -22,7 +20,7 @@ class MultiApp:
         # app = st.sidebar(
         with st.sidebar:        
             app = option_menu(
-                menu_title='Pondering ',
+                menu_title='Aranademi ',
                 options=['About Us','Biologi','Fisika','Matematika','Kimia','Donasi'],
                 icons=['house-fill','person-circle','trophy-fill','chat-fill','info-circle-fill'],
                 menu_icon='chat-text-fill',
