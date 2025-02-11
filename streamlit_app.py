@@ -3,7 +3,17 @@ from streamlit_option_menu import option_menu
 import importlib
 
 # Set the page configuration
-st.set_page_config(layout="centered")
+st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
+
+# Hide the sidebar using custom CSS
+st.markdown("""
+    <style>
+        /* Hide the Streamlit sidebar */
+        .css-1d391kg {
+            display: none;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Use option_menu for navigation
 selected = option_menu(
