@@ -5,7 +5,7 @@ from pages import *
 # Set page configuration to always be mobile-sized
 st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 
-hiii
+
 class MultiApp:
 
     def __init__(self):
@@ -23,7 +23,7 @@ class MultiApp:
         with st.sidebar:        
             app = option_menu(
                 menu_title='Pondering ',
-                options=['Home','Account','Trending','Your Posts','about','Buy_me_a_coffee'],
+                options=['About Us','Biologi','Fisika','Matematika','Kimia','Donasi'],
                 icons=['house-fill','person-circle','trophy-fill','chat-fill','info-circle-fill'],
                 menu_icon='chat-text-fill',
                 default_index=1,
