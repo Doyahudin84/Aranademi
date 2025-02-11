@@ -12,6 +12,7 @@ selected = option_menu(
     icons=["info-circle", "calculator", "atom", "flask", "leaf", "donate"],
     menu_icon="cast",
     default_index=0,
+    orientation="horizontal",  # Set to horizontal
 )
 
 # Dynamically load and display the content of the selected page
