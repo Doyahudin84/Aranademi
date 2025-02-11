@@ -1,7 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 import importlib
-from pages import *
 
 # Set the page configuration
 st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
@@ -35,7 +34,7 @@ selected = option_menu(
 
 # Dynamically load and display the content of the selected page
 if selected == "About Us":
-    about_us = importlib.import_module("about_us")  # Import about_us.py
+    about_us = importlib.import_module("pages.about_us")  # Import about_us.py
     about_us.show_page()  # Call the show_page() function from about_us.py
 
 elif selected == "Matematika":
