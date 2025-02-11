@@ -16,27 +16,41 @@ st.markdown("""
             display: none;
         }
 
-       /* Style the option menu */
-        .st-bd {
-            background-color: #07e3eb !important;  /* Menu background color */
-            color: white !important;  /* Default text color */
+       /* Style for the entire menu container */
+        .menu {
+            background-color: black !important;  /* Black background for the entire menu */
+            padding: 10px 0;  /* Optional: Padding around the menu */
         }
 
-        /* Hover Effect */
-        .st-bd button:hover {
-            background-color: #07c1d3 !important;  /* Hover background color */
+        /* Style for each nav-item (menu item) */
+        .nav-item {
+            color: #07e3eb !important;  /* Text color for the menu items */
+            background-color: transparent !important;  /* Transparent background by default */
+            border: none !important;
+            font-size: 16px !important;  /* Font size */
         }
 
-        /* Active item */
-        .st-bd button[aria-selected="true"] {
-            background-color: #07e3eb !important;  /* Active button color */
+        /* Hover effect for nav-item */
+        .nav-item:hover {
+            background-color: #07e3eb !important;  /* Background color on hover */
+            color: white !important;  /* Text color on hover */
+        }
+
+        /* Active (selected) nav-item styling */
+        .nav-item.active {
+            background-color: #07e3eb !important;  /* Active background color */
             color: white !important;  /* Active text color */
         }
 
-        /* Change button background when selected */
-        .st-bd button {
-            background-color: transparent !important;  /* Transparent background for each button */
-            color: #07e3eb !important;  /* Text color */
+        /* Optional: Center the menu items horizontally */
+        .menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Optional: Adjust the spacing between nav-items */
+        .menu .nav-item {
+            margin: 0 10px;  /* Space between menu items */
         }
     </style>
 """, unsafe_allow_html=True)
