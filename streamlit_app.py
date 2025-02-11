@@ -16,29 +16,27 @@ st.markdown("""
             display: none;
         }
 
-        /* Style the option menu */
-        .css-1d391kg button:hover {
-            background-color: #07e3eb !important;  /* Hover background color */
-            color: white;  /* Text color when hovered */
+       /* Style the option menu */
+        .st-bd {
+            background-color: #07e3eb !important;  /* Menu background color */
+            color: white !important;  /* Default text color */
         }
 
-        /* Style the active option in option_menu */
-        .css-1d391kg .active {
-            background-color: #07e3eb !important;  /* Active option background color */
-            color: white !important;  /* Active option text color */
+        /* Hover Effect */
+        .st-bd button:hover {
+            background-color: #07c1d3 !important;  /* Hover background color */
         }
 
-        /* Style the option menu overall (default color) */
-        .css-1d391kg button {
-            background-color: transparent !important;
-            color: #07e3eb !important;  /* Default text color */
+        /* Active item */
+        .st-bd button[aria-selected="true"] {
+            background-color: #07e3eb !important;  /* Active button color */
+            color: white !important;  /* Active text color */
         }
 
-        /* Customize the position of the option menu */
-        .css-1d391kg {
-            justify-content: center;
-            padding-top: 10px;
-            padding-bottom: 10px;
+        /* Change button background when selected */
+        .st-bd button {
+            background-color: transparent !important;  /* Transparent background for each button */
+            color: #07e3eb !important;  /* Text color */
         }
     </style>
 """, unsafe_allow_html=True)
