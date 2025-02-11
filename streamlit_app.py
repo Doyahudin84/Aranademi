@@ -5,7 +5,7 @@ from pages import *
 # Set page configuration to always be mobile-sized
 st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 
-
+hiii
 class MultiApp:
 
     def __init__(self):
