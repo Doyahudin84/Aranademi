@@ -9,6 +9,7 @@ st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 st.markdown("""
     <style>
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+        @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
     </style>
 """, unsafe_allow_html=True)
 
