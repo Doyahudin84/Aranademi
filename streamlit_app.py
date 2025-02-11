@@ -8,8 +8,38 @@ st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 # Add custom CSS to load Font Awesome icons
 st.markdown("""
     <style>
+        /* Load Font Awesome */
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-        @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+        /* Hide the Streamlit sidebar */
+        .css-1d391kg {
+            display: none;
+        }
+
+        /* Style the option menu */
+        .css-1d391kg button:hover {
+            background-color: #07e3eb !important;  /* Hover background color */
+            color: white;  /* Text color when hovered */
+        }
+
+        /* Style the active option in option_menu */
+        .css-1d391kg .active {
+            background-color: #07e3eb !important;  /* Active option background color */
+            color: white !important;  /* Active option text color */
+        }
+
+        /* Style the option menu overall (default color) */
+        .css-1d391kg button {
+            background-color: transparent !important;
+            color: #07e3eb !important;  /* Default text color */
+        }
+
+        /* Customize the position of the option menu */
+        .css-1d391kg {
+            justify-content: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
     </style>
 """, unsafe_allow_html=True)
 
