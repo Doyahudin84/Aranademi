@@ -5,6 +5,13 @@ import importlib
 # Set the page configuration
 st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 
+# Add custom CSS to load Font Awesome icons
+st.markdown("""
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+    </style>
+""", unsafe_allow_html=True)
+
 # Hide the sidebar using custom CSS
 st.markdown("""
     <style>
