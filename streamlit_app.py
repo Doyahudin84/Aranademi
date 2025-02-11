@@ -1,50 +1,40 @@
-
 import streamlit as st
 from streamlit_option_menu import option_menu
 import importlib
 
-# Mengatur konfigurasi halaman agar selalu berukuran mobile
+# Set the page configuration
 st.set_page_config(layout="centered")
-st.sidebar.empty()
 
-class MultiApp:
+# Use option_menu for navigation
+selected = option_menu(
+    "Main Menu",
+    ["About Us", "Matematika", "Fisika", "Kimia", "Biologi", "Donasi"],
+    icons=["info-circle", "calculator", "atom", "flask", "leaf", "donate"],
+    menu_icon="cast",
+    default_index=0,
+)
 
-    def __init__(self):
-        self.apps = []
+# Dynamically load and display the content of the selected page
+if selected == "About Us":
+    about_us = importlib.import_module("about_us")  # Import about_us.py
+    about_us.show_page()  # Call the show_page() function from about_us.py
 
-    def add_app(self, title, func):
-        self.apps.append({
-            "title": title,
-            "function": func
-        })
+elif selected == "Matematika":
+    matematika = importlib.import_module("matematika")  # Import matematika.py
+    matematika.show_page()  # Call the show_page() function from matematika.py
 
-    def run(self):  # Menambahkan self di sini
-        with st.sidebar:
-            app = option_menu(
-                menu_title='Aranademi ',
-                options=['About Us', 'Biologi', 'Fisika', 'Matematika', 'Kimia', 'Donasi'],
-                icons=['house-fill', 'person-circle', 'trophy-fill', 'chat-fill', 'info-circle-fill'],
-                menu_icon='chat-text-fill',
-                default_index=1,
-                styles={
-                    "container": {"padding": "5!important", "background-color": 'black'},
-                    "icon": {"color": "white", "font-size": "23px"},
-                    "nav-link": {"color": "white", "font-size": "20px", "text-align": "left", "margin": "0px", "--hover-color": "blue"},
-                    "nav-link-selected": {"background-color": "#02ab21"},
-                }
-            )
+elif selected == "Fisika":
+    fisika = importlib.import_module("fisika")  # Import fisika.py
+    fisika.show_page()  # Call the show_page() function from fisika.py
 
-        # Dinamis mengimpor dan menjalankan halaman yang dipilih
-        if app:
-            try:
-                # Mengubah nama halaman menjadi format file (misal "Biologi" menjadi "biologi.py")
-                page_module = importlib.import_module(f"pages.{app.lower()}")  # Memastikan nama file sesuai
-                page_module.app()  # Memanggil fungsi 'app()' di dalam halaman
-            except ModuleNotFoundError:
-                st.error(f"Halaman {app} tidak ditemukan!")
-                
+elif selected == "Kimia":
+    kimia = importlib.import_module("kimia")  # Import kimia.py
+    kimia.show_page()  # Call the show_page() function from kimia.py
 
-# Menjalankan aplikasi
-if __name__ == '__main__':
-    app = MultiApp()
-    app.run()
+elif selected == "Biologi":
+    biologi = importlib.import_module("biologi")  # Import biologi.py
+    biologi.show_page()  # Call the show_page() function from biologi.py
+
+elif selected == "Donasi":
+    donasi = importlib.import_module("donasi")  # Import donasi.py
+    donasi.show_page()  # Call the show_page() function from donasi.py
