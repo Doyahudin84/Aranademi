@@ -38,21 +38,21 @@ if selected == "About Us":
     about_us.show_page()  # Call the show_page() function from about_us.py
 
 elif selected == "Matematika":
-    matematika = importlib.import_module("matematika")  # Import matematika.py
+    matematika = importlib.import_module("pages.matematika")  # Import matematika.py
     matematika.show_page()  # Call the show_page() function from matematika.py
 
 elif selected == "Fisika":
-    fisika = importlib.import_module("fisika")  # Import fisika.py
+    fisika = importlib.import_module("pages.fisika")  # Import fisika.py
     fisika.show_page()  # Call the show_page() function from fisika.py
 
 elif selected == "Kimia":
-    kimia = importlib.import_module("kimia")  # Import kimia.py
+    kimia = importlib.import_module("pages.kimia")  # Import kimia.py
     kimia.show_page()  # Call the show_page() function from kimia.py
 
 elif selected == "Biologi":
-    biologi = importlib.import_module("biologi")  # Import biologi.py
+    biologi = importlib.import_module("pages.biologi")  # Import biologi.py
     biologi.show_page()  # Call the show_page() function from biologi.py
 
 elif selected == "Donasi":
-    donasi = importlib.import_module("donasi")  # Import donasi.py
+    donasi = importlib.import_module("pages.donasi")  # Import donasi.py
     donasi.show_page()  # Call the show_page() function from donasi.py
