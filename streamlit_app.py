@@ -6,7 +6,16 @@ import importlib
 st.set_page_config(layout="centered")
 
 #, initial_sidebar_state="collapsed"
-
+st.markdown(
+    """
+    <style>
+    .st-emotion-cache-79elbk {
+        display: none;
+    }
+    </style>
+    """, 
+    unsafe_allow_html=True
+)
 # Use option_menu for navigation
 with st.sidebar:
     selected = option_menu(
