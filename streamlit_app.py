@@ -28,7 +28,7 @@ st.image("aranademi.png", width=200, use_container_width='auto')
 # Use option_menu for navigation
 #with st.sidebar:
 selected = option_menu(
-        none,
+        "",
         ["About Us",  "App STEM","---","Donasi"],
         icons=["caret-right-fill", "caret-right-fill", "cash-coin"],
         menu_icon="cast",
