@@ -32,11 +32,6 @@ selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'],
     menu_icon="cast", default_index=0, orientation="horizontal")
 selected2
 
-# Menampilkan ikon atom menggunakan sintaks Streamlit
-st.write(":atom:")
-
-# Menampilkan ikon atom menggunakan HTML dan Font Awesome
-st.markdown('<i class="fas fa-atom"></i>', unsafe_allow_html=True)
 
 
 # Dynamically load and display the content of the selected page
