@@ -32,7 +32,7 @@ selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'],
     menu_icon="cast", default_index=0, orientation="horizontal")
 selected2
 
-
+st.markdown('<i class="fas fa-chart-bar"></i> Grafik Data', unsafe_allow_html=True)
 
 # Dynamically load and display the content of the selected page
 if selected == "About Us":
