@@ -43,9 +43,8 @@ if selected == "About Us":
     about_us.show_page()  # Call the show_page() function from about_us.py
 
 elif selected == "App STEM":
-        # Submenu untuk Menu 1
         submenu = option_menu(
-            "Pilih Submenu untuk Menu 1", 
+            "", 
             ["Matematika", "Fisika", "Kimia", "Biologi"], 
             menu_icon="file-earmark-text", 
             default_index=0, 
