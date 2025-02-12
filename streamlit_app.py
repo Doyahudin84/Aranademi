@@ -20,7 +20,7 @@ st.markdown(
 with st.sidebar:
     selected = option_menu(
         "Aranademi",
-        ["About Us", "Matematika", "Fisika", "Kimia", "Biologi", "Donasi"],
+        ["About Us", "Matematika", "Fisika", "Kimia", "Biologi", "---","Donasi"],
         icons=["caret-right-fill", "caret-right-fill", "caret-right-fill", "caret-right-fill", "caret-right-fill", "cash-coin"],
         menu_icon="cast",
         default_index=0,
