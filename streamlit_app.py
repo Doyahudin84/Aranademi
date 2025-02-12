@@ -23,14 +23,10 @@ with st.sidebar:
         ["About Us", "Matematika", "Fisika", "Kimia", "Biologi", "---","Donasi"],
         icons=["caret-right-fill", "caret-right-fill", "caret-right-fill", "caret-right-fill", "caret-right-fill", "cash-coin"],
         menu_icon="cast",
-        default_index=0,
+        default_index=0, orientation="horizontal"
        
     )
 
-selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'], 
-    icons=['house', 'cloud-upload', "atom", 'gear'], 
-    menu_icon="cast", default_index=0, orientation="horizontal")
-selected2
 
 st.markdown('<i class="fas fa-house"></i> Grafik Data', unsafe_allow_html=True)
 
