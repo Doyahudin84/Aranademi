@@ -17,11 +17,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown("""
-    <div style="text-align: center;">
-        <img src="aranademi.png" width="200" />
-    </div>
-""", unsafe_allow_html=True)
+# Create empty space for centering the logo
+st.empty()
+
+# Display the logo centered
+st.image("aranademi.png", width=200, use_column_width='auto')
+
+
+
 # Use option_menu for navigation
 #with st.sidebar:
 selected = option_menu(
