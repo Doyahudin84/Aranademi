@@ -19,9 +19,9 @@ st.markdown(
 # Use option_menu for navigation
 with st.sidebar:
     selected = option_menu(
-        "Main Menu",
+        "Aranademi",
         ["About Us", "Matematika", "Fisika", "Kimia", "Biologi", "Donasi"],
-        icons=["info-circle", "calculator", "thermometer", "science", "tree", "donate"],
+        icons=["caret-right-fill", "caret-right-fill", "caret-right-fill", "caret-right-fill", "caret-right-fill", "donate"],
         menu_icon="cast",
         default_index=0,
        
