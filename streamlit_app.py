@@ -11,11 +11,7 @@ st.markdown("""
         /* Load Font Awesome */
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
-        /* Hide the Streamlit sidebar */
-        .css-1d391kg {
-            display: none;
-        }
-
+   
        /* Style for the entire menu container */
         .menu {
             background-color: black !important;  /* Black background for the entire menu */
@@ -55,25 +51,18 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Hide the sidebar using custom CSS
-st.markdown("""
-    <style>
-        /* Hide the Streamlit sidebar */
-        .css-1d391kg {
-            display: none;
-        }
-    </style>
-""", unsafe_allow_html=True)
+
 
 # Use option_menu for navigation
-selected = option_menu(
-    "Main Menu",
-    ["About Us", "Matematika", "Fisika", "Kimia", "Biologi", "Donasi"],
-    icons=["info-circle", "calculator", "atom", "flask", "leaf", "donate"],
-    menu_icon="cast",
-    default_index=0,
-    orientation="horizontal",  # Set to horizontal
-)
+with st.sidebar:
+    selected = option_menu(
+        "Main Menu",
+        ["About Us", "Matematika", "Fisika", "Kimia", "Biologi", "Donasi"],
+        icons=["info-circle", "calculator", "atom", "flask", "leaf", "donate"],
+        menu_icon="cast",
+        default_index=0,
+        orientation="horizontal",  # Set to horizontal
+    )
 
 # Dynamically load and display the content of the selected page
 if selected == "About Us":
