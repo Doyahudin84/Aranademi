@@ -27,6 +27,14 @@ with st.sidebar:
        
     )
 
+selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'], 
+    icons=['house', 'cloud-upload', "list-task", 'gear'], 
+    menu_icon="cast", default_index=0, orientation="horizontal")
+    selected2
+
+
+
+
 # Dynamically load and display the content of the selected page
 if selected == "About Us":
     about_us = importlib.import_module("pages.about_us")  # Import about_us.py
