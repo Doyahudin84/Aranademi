@@ -3,9 +3,9 @@ from streamlit_option_menu import option_menu
 import importlib
 
 # Set the page configuration
-st.set_page_config(layout="centered")
+st.set_page_config(layout="centered", initial_sidebar_state="collapsed")
 
-#, initial_sidebar_state="collapsed"
+#
 st.markdown(
     """
     <style>
@@ -20,8 +20,8 @@ st.markdown(
 #with st.sidebar:
 selected = option_menu(
         "Aranademi",
-        ["About Us", "Matematika", "App STEM","---","Donasi"],
-        icons=["caret-right-fill", "caret-right-fill", "caret-right-fill", "cash-coin"],
+        ["About Us",  "App STEM","---","Donasi"],
+        icons=["caret-right-fill", "caret-right-fill", "cash-coin"],
         menu_icon="cast",
         default_index=0, orientation="horizontal"
        
