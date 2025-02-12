@@ -19,7 +19,7 @@ st.markdown(
 
 st.markdown("""
     <div style="text-align: center;">
-        <img src=aranademi.png" width="200" />
+        <img src="aranademi.png" width="200" />
     </div>
 """, unsafe_allow_html=True)
 # Use option_menu for navigation
