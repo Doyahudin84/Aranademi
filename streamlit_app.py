@@ -28,7 +28,7 @@ with st.sidebar:
     )
 
 selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'], 
-    icons=['house', 'cloud-upload', "list-task", 'gear'], 
+    icons=['house', 'cloud-upload', "atom", 'gear'], 
     menu_icon="cast", default_index=0, orientation="horizontal")
 selected2
 
