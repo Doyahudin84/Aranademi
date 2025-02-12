@@ -42,21 +42,30 @@ if selected == "About Us":
     about_us = importlib.import_module("pages.about_us")  # Import about_us.py
     about_us.show_page()  # Call the show_page() function from about_us.py
 
-elif selected == "Matematika":
-    matematika = importlib.import_module("pages.matematika")  # Import matematika.py
-    matematika.show_page()  # Call the show_page() function from matematika.py
-
-elif selected == "Fisika":
-    fisika = importlib.import_module("pages.fisika")  # Import fisika.py
-    fisika.show_page()  # Call the show_page() function from fisika.py
-
-elif selected == "Kimia":
-    kimia = importlib.import_module("pages.kimia")  # Import kimia.py
-    kimia.show_page()  # Call the show_page() function from kimia.py
-
-elif selected == "Biologi":
-    biologi = importlib.import_module("pages.biologi")  # Import biologi.py
-    biologi.show_page()  # Call the show_page() function from biologi.py
+elif selected == "App STEM":
+        # Submenu untuk Menu 1
+        submenu = option_menu(
+            "Pilih Submenu untuk Menu 1", 
+            ["Matematika", "Fisika", "Kimia", "Biologi"], 
+            menu_icon="file-earmark-text", 
+            default_index=0, 
+            orientation="horizontal"
+        )
+        if submenu ==  "Matematika":
+            matematika = importlib.import_module("pages.matematika")  # Import matematika.py
+            matematika.show_page()  # Call the show_page() function from matematika.py
+        
+        elif submenu == "Fisika":
+            fisika = importlib.import_module("pages.fisika")  # Import fisika.py
+            fisika.show_page()  # Call the show_page() function from fisika.py
+        
+        elif submenu == "Kimia":
+            kimia = importlib.import_module("pages.kimia")  # Import kimia.py
+            kimia.show_page()  # Call the show_page() function from kimia.py
+        
+        elif submenu == "Biologi":
+            biologi = importlib.import_module("pages.biologi")  # Import biologi.py
+            biologi.show_page()  # Call the show_page() function from biologi.py
 
 elif selected == "Donasi":
     donasi = importlib.import_module("pages.donasi")  # Import donasi.py
