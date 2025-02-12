@@ -21,7 +21,7 @@ with st.sidebar:
     selected = option_menu(
         "Main Menu",
         ["About Us", "Matematika", "Fisika", "Kimia", "Biologi", "Donasi"],
-        icons=["info-circle", "calculator", "gear", "flask", "dna", "donate"],
+        icons=["info-circle", "calculator", "gear", "flask", "microscope", "donate"],
         menu_icon="cast",
         default_index=0,
        
