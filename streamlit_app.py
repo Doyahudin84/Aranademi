@@ -21,7 +21,7 @@ st.markdown(
 st.empty()
 
 # Display the logo centered
-st.image("aranademi.png", width=100, use_container_width='auto')
+st.image("aranademi.png", width=200, use_container_width='auto')
 
 
 
