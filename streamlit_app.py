@@ -29,7 +29,7 @@ st.image("aranademi.png", width=200, use_container_width='auto')
 #with st.sidebar:
 selected = option_menu(
         "",
-        ["About Us",  "App STEM","---","Donasi"],
+        ["About Us",  "App STEM","Donasi"],
         icons=["caret-right-fill", "caret-right-fill", "cash-coin"],
         menu_icon="cast",
         default_index=0, orientation="horizontal"
