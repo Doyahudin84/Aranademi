@@ -17,8 +17,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Use option_menu for navigation
-with st.sidebar:
-    selected = option_menu(
+#with st.sidebar:
+selected = option_menu(
         "Aranademi",
         ["About Us", "Matematika", "Fisika", "Kimia", "Biologi", "---","Donasi"],
         icons=["caret-right-fill", "caret-right-fill", "caret-right-fill", "caret-right-fill", "caret-right-fill", "cash-coin"],
@@ -27,8 +27,6 @@ with st.sidebar:
        
     )
 
-
-st.markdown('<i class="fas fa-house"></i> Grafik Data', unsafe_allow_html=True)
 
 # Dynamically load and display the content of the selected page
 if selected == "About Us":
