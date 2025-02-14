@@ -3,6 +3,6 @@ import streamlit as st
 
 def show_page():
     st.title("About Us")
-    st.write("This is the About Us page of the app.")
+    st.write("Hi kami dari aranademi dengan senang mempersembahkan app sederhana.")
 
 
