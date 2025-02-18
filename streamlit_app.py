@@ -33,7 +33,12 @@ selected = option_menu(
         icons=["caret-right-fill", "caret-right-fill", "cash-coin"],
         menu_icon="cast",
         default_index=0, orientation="horizontal"
-       
+        styles={
+        "container": {"padding": "0!important", "background-color": "#d7f1fc"},
+        "icon": {"color": "orange", "font-size": "25px"}, 
+        "nav-link": {"font-size": "25px", "text-align": "left", "margin":"0px", "--hover-color": "#2A3791"},
+        "nav-link-selected": {"background-color": "#2A3791"},
+    }
     )
 
 
