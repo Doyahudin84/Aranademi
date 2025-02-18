@@ -35,9 +35,9 @@ selected = option_menu(
         default_index=0, orientation="horizontal",
         styles={
                 "container": {"padding": "0!important", "background-color": "#d7f1fc"},
-                "icon": {"color": "orange", "font-size": "25px"}, 
-                "nav-link": {"font-size": "25px", "text-align": "left", "margin":"0px", "--hover-color": "#2A3791"},
-                "nav-link-selected": {"background-color": "#2A3791"},
+                "icon": {"color": "orange", "font-size": "20px"}, 
+                "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#13AFF0"},
+                "nav-link-selected": {"background-color": "#13AFF0"},
                 }
     )
 
