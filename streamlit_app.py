@@ -32,7 +32,7 @@ selected = option_menu(
         ["About Us",  "App STEM","Donasi"],
         icons=["caret-right-fill", "caret-right-fill", "cash-coin"],
         menu_icon="cast",
-        default_index=0, orientation="horizontal"
+        default_index=0, orientation="horizontal",
         styles={
                 "container": {"padding": "0!important", "background-color": "#d7f1fc"},
                 "icon": {"color": "orange", "font-size": "25px"}, 
